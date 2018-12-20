@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script>
+	function validate()
+    {
+    	var a;
+        a=document.getElementById("old").value;
+		if(a < 18){
+		alert("Enter a value equal to or greater than 18");		
+		}
+		var b = documnet.getElementById("tar").value;
+		 var x = document.getElementById("browse");
+			var option = document.createElement("option");
+			option.value = b;
+		x.add(option);
+	}
+	
+</script>
+<style>
+fieldset{
+color:RGB(135, 54, 0);
+background-color:RGB(169, 204, 227);
+border:2px solid hsl(204, 64%, 23%);
+font-family:courier;
+}
+legend{
+color:black;
+font-family:courier;
+font-size:300%;
+text-shadow: 2px 2px 5px red;
+}
+</style>
+</head>
+<body>
+<form action="/action_page.php" method="get">
+<fieldset>
+<legend><img src="logo.png" alt="HTML5 Icon" style="width:100px;height:100px;">StockMarket</legend>
+  <h2>Name:<br>
+  <input type="text" name="name" pattern="[A-Za-z]{}" title="Only Alphabets" required><br>
+  Age:<br>
+  <input type="text" name="age" id="old" required><br>
+  E-mail:<br>
+  <input type="email" name="email" required><br>
+  City:<br>
+	 <input list="browse" id="tar" name="browser">
+  <datalist id="browsers">
+    <option value="RAJKOT">
+    <option value="VIZAG">
+	<option value="BANGALORE">
+     </datalist><br>
+		<br><input type="submit" value="Submit" onclick="validate()"></h2>
+  </fieldset>
+</form>
+</body>
+</html>
